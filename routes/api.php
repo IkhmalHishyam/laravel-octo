@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\MovieAPIController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TokenController;
@@ -14,14 +15,16 @@ use App\Http\Controllers\TokenController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::prefix('v1') -> group(function() {
 
-Route::group(array('middleware' => ['custom_auth']), function ()
-{
-    Route::apiResource('token', TokenController::class);
-    Route::post('/token/topup', [TokenController::class, 'store']);
+    Route::get('/view/movie/genre', [MovieAPIController::class, 'viewMovieGenre']);
+    Route::get('/view/movie/timeslot', [MovieAPIController::class, 'viewMovieTimeSlot']);
+    Route::get('/view/movie/theater', [MovieAPIController::class, 'viewMovieTheater']);
+    Route::get('/view/movie/performer', [MovieAPIController::class, 'viewMoviePerformer']);
+    Route::post('/store/movie/rating', [MovieAPIController::class, 'storeMovieRating']);
+    Route::get('/view/movie/date', [MovieAPIController::class, 'viewMovieDate']);
+    Route::post('/store/movie', [MovieAPIController::class, 'storeMovie']);
+    
 });
 
 
