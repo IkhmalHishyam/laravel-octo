@@ -1,0 +1,929 @@
+{
+	"info": {
+		"_postman_id": "a4a80094-ac23-4afb-bd97-b5f05f952957",
+		"name": "RF Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17066044"
+	},
+	"item": [
+		{
+			"name": "Genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/view/movie/genre?genre=Action",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"view",
+						"movie",
+						"genre"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Action"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Genre",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/view/movie/genre?genre=Action",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"view",
+								"movie",
+								"genre"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Action"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:11:55 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:11:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Genre\",\n    \"status\": true,\n    \"message\": \"Succesfully retrieved movies based on genre : Action\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Edge of Tomorrow\",\n            \"description\": \"With the help of warrior Rita Vrataski, Major William Cage has to save Earth and the human race from an alien species, after being caught in a time loop.\",\n            \"release\": \"2014-05-29\",\n            \"length\": 113,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Doug Liman\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Sicario\",\n            \"description\": \"An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.\",\n            \"release\": \"2015-05-19\",\n            \"length\": 121,\n            \"mpaa_rating\": \"R\",\n            \"language\": \"English\",\n            \"director\": \"Denis Villeneuve\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Oblivion\",\n            \"description\": \"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.\",\n            \"release\": \"2013-04-19\",\n            \"length\": 124,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Joseph Kosinski\",\n            \"created_at\": \"2022-06-22T13:33:22.000000Z\",\n            \"updated_at\": \"2022-06-22T13:33:22.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Test\",\n            \"description\": \"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.\",\n            \"release\": \"2013-04-19\",\n            \"length\": 124,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Joseph Kosinski\",\n            \"created_at\": \"2022-06-22T13:53:58.000000Z\",\n            \"updated_at\": \"2022-06-22T13:53:58.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "TimeSlot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/view/movie/timeslot?theater_name=TGV CInema&time_start=2022-06-20 20:00:00&time_end=2022-06-20 23:00:00",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"view",
+						"movie",
+						"timeslot"
+					],
+					"query": [
+						{
+							"key": "theater_name",
+							"value": "TGV CInema"
+						},
+						{
+							"key": "time_start",
+							"value": "2022-06-20 20:00:00"
+						},
+						{
+							"key": "time_end",
+							"value": "2022-06-20 23:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TimeSlot",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/view/movie/timeslot?theater_name=TGV CInema&time_start=2022-06-20 20:00:00&time_end=2022-06-20 23:00:00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"view",
+								"movie",
+								"timeslot"
+							],
+							"query": [
+								{
+									"key": "theater_name",
+									"value": "TGV CInema"
+								},
+								{
+									"key": "time_start",
+									"value": "2022-06-20 20:00:00"
+								},
+								{
+									"key": "time_end",
+									"value": "2022-06-20 23:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:12:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:12:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"TimeSlot\",\n    \"status\": true,\n    \"message\": \"Succesfully retrieved movies based on theater : TGV CInema, start time : 2022-06-20 20:00:00 & end time : 2022-06-20 23:00:00\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Sicario\",\n            \"description\": \"An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.\",\n            \"release\": \"2015-05-19\",\n            \"length\": 121,\n            \"mpaa_rating\": \"R\",\n            \"language\": \"English\",\n            \"director\": \"Denis Villeneuve\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"timeslots\": [\n                {\n                    \"id\": 2,\n                    \"d_date\": \"2022-06-20\",\n                    \"start_time\": \"2022-06-20 20:00:00\",\n                    \"end_time\": \"2022-06-20 23:00:00\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"hall_id\": 1,\n                    \"hall\": {\n                        \"id\": 1,\n                        \"hall_no\": \"1\",\n                        \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"theater_id\": 1,\n                        \"theater\": {\n                            \"id\": 1,\n                            \"name\": \"TGV Cinema\",\n                            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"A Quiet Place\",\n            \"description\": \"In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.\",\n            \"release\": \"2018-03-09\",\n            \"length\": 90,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"John Krasinski\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"timeslots\": [\n                {\n                    \"id\": 3,\n                    \"d_date\": \"2022-06-20\",\n                    \"start_time\": \"2022-06-20 20:00:00\",\n                    \"end_time\": \"2022-06-20 22:00:00\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 3,\n                    \"hall_id\": 2,\n                    \"hall\": {\n                        \"id\": 2,\n                        \"hall_no\": \"2\",\n                        \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"theater_id\": 1,\n                        \"theater\": {\n                            \"id\": 1,\n                            \"name\": \"TGV Cinema\",\n                            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Specific Movie Theater",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/view/movie/theater?theater_name=GSC&d_date=2022-06-20",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"view",
+						"movie",
+						"theater"
+					],
+					"query": [
+						{
+							"key": "theater_name",
+							"value": "GSC"
+						},
+						{
+							"key": "d_date",
+							"value": "2022-06-20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Specific Movie Theater",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/view/movie/theater?theater_name=GSC&d_date=2022-06-20",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"view",
+								"movie",
+								"theater"
+							],
+							"query": [
+								{
+									"key": "theater_name",
+									"value": "GSC"
+								},
+								{
+									"key": "d_date",
+									"value": "2022-06-20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:15:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:15:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Specific Movie Theater\",\n    \"status\": true,\n    \"message\": \"Succesfully retrieved movies based on theater : GSC & date : 2022-06-20\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Sicario\",\n            \"description\": \"An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.\",\n            \"release\": \"2015-05-19\",\n            \"length\": 121,\n            \"mpaa_rating\": \"R\",\n            \"language\": \"English\",\n            \"director\": \"Denis Villeneuve\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"timeslots\": [\n                {\n                    \"id\": 4,\n                    \"d_date\": \"2022-06-20\",\n                    \"start_time\": \"2022-06-20 20:00:00\",\n                    \"end_time\": \"2022-06-20 23:00:00\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"hall_id\": 3,\n                    \"hall\": {\n                        \"id\": 3,\n                        \"hall_no\": \"1\",\n                        \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"theater_id\": 2,\n                        \"theater\": {\n                            \"id\": 2,\n                            \"name\": \"GSC\",\n                            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n                        }\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"d_date\": \"2022-06-20\",\n                    \"start_time\": \"2022-06-20 20:00:00\",\n                    \"end_time\": \"2022-06-20 23:00:00\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"hall_id\": 5,\n                    \"hall\": {\n                        \"id\": 5,\n                        \"hall_no\": \"3\",\n                        \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"theater_id\": 2,\n                        \"theater\": {\n                            \"id\": 2,\n                            \"name\": \"GSC\",\n                            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"A Quiet Place\",\n            \"description\": \"In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.\",\n            \"release\": \"2018-03-09\",\n            \"length\": 90,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"John Krasinski\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"timeslots\": [\n                {\n                    \"id\": 5,\n                    \"d_date\": \"2022-06-20\",\n                    \"start_time\": \"2022-06-20 20:00:00\",\n                    \"end_time\": \"2022-06-20 22:00:00\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 3,\n                    \"hall_id\": 4,\n                    \"hall\": {\n                        \"id\": 4,\n                        \"hall_no\": \"2\",\n                        \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                        \"theater_id\": 2,\n                        \"theater\": {\n                            \"id\": 2,\n                            \"name\": \"GSC\",\n                            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                            \"updated_at\": \"2022-06-22T11:11:15.000000Z\"\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Performer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/view/movie/performer?performer_name=Emily",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"view",
+						"movie",
+						"performer"
+					],
+					"query": [
+						{
+							"key": "performer_name",
+							"value": "Emily"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Performer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/view/movie/performer?performer_name=Emily",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"view",
+								"movie",
+								"performer"
+							],
+							"query": [
+								{
+									"key": "performer_name",
+									"value": "Emily"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:18:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:18:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Search Performer\",\n    \"status\": true,\n    \"message\": \"Succesfully retrieved movies based on performer : Emily\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Edge of Tomorrow\",\n            \"description\": \"With the help of warrior Rita Vrataski, Major William Cage has to save Earth and the human race from an alien species, after being caught in a time loop.\",\n            \"release\": \"2014-05-29\",\n            \"length\": 113,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Doug Liman\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"Overall_rating\": \"8.0\",\n            \"ratings\": [\n                {\n                    \"id\": 1,\n                    \"rating\": 8,\n                    \"r_description\": \"Beautiful and action packed!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 2,\n                    \"rating\": 9,\n                    \"r_description\": \"Excelent!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 2\n                },\n                {\n                    \"id\": 3,\n                    \"rating\": 5,\n                    \"r_description\": \"Could have been better with the ending.\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 3\n                },\n                {\n                    \"id\": 10,\n                    \"rating\": 10,\n                    \"r_description\": \"Perfect!\",\n                    \"created_at\": \"2022-06-22T11:17:03.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:17:03.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 1\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Sicario\",\n            \"description\": \"An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.\",\n            \"release\": \"2015-05-19\",\n            \"length\": 121,\n            \"mpaa_rating\": \"R\",\n            \"language\": \"English\",\n            \"director\": \"Denis Villeneuve\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"Overall_rating\": \"6.0\",\n            \"ratings\": [\n                {\n                    \"id\": 4,\n                    \"rating\": 7,\n                    \"r_description\": \"Nice!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 5,\n                    \"rating\": 5,\n                    \"r_description\": \" \",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 2\n                },\n                {\n                    \"id\": 6,\n                    \"rating\": 6,\n                    \"r_description\": \"The soundtracks are marvelous!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 3\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"A Quiet Place\",\n            \"description\": \"In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.\",\n            \"release\": \"2018-03-09\",\n            \"length\": 90,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"John Krasinski\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"Overall_rating\": \"7.0\",\n            \"ratings\": [\n                {\n                    \"id\": 7,\n                    \"rating\": 8,\n                    \"r_description\": \"Please do sequel!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 3,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 8,\n                    \"rating\": 6,\n                    \"r_description\": \" \",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 3,\n                    \"user_id\": 2\n                },\n                {\n                    \"id\": 9,\n                    \"rating\": 7,\n                    \"r_description\": \"I am thrill!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 3,\n                    \"user_id\": 3\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Give Rating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/movie/rating?movie_title=Edge of tomorrow&username=Abu&rating=10&r_description=Perfect!",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"movie",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "movie_title",
+							"value": "Edge of tomorrow"
+						},
+						{
+							"key": "username",
+							"value": "Abu"
+						},
+						{
+							"key": "rating",
+							"value": "10"
+						},
+						{
+							"key": "r_description",
+							"value": "Perfect!"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Give Rating",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/movie/rating?movie_title=Edge of tomorrow&username=Abu&rating=10&r_description=Perfect!",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"movie",
+								"rating"
+							],
+							"query": [
+								{
+									"key": "movie_title",
+									"value": "Edge of tomorrow"
+								},
+								{
+									"key": "username",
+									"value": "Abu"
+								},
+								{
+									"key": "rating",
+									"value": "10"
+								},
+								{
+									"key": "r_description",
+									"value": "Perfect!"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:22:48 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 14:22:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Give Rating\",\n    \"status\": true,\n    \"message\": \"Successfully added review for Edge of Tomorrow by user : Abu.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/view/movie/date?r_date=2016-06-20",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"view",
+						"movie",
+						"date"
+					],
+					"query": [
+						{
+							"key": "r_date",
+							"value": "2016-06-20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/view/movie/date?r_date=2016-06-20",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"view",
+								"movie",
+								"date"
+							],
+							"query": [
+								{
+									"key": "r_date",
+									"value": "2016-06-20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 16:28:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 16:28:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"New Movies\",\n    \"status\": true,\n    \"message\": \"Successfully retrieved movie based on date : 2016-06-20.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Edge of Tomorrow\",\n            \"description\": \"With the help of warrior Rita Vrataski, Major William Cage has to save Earth and the human race from an alien species, after being caught in a time loop.\",\n            \"release\": \"2014-05-29\",\n            \"length\": 113,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Doug Liman\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"Overall_rating\": \"8.4\",\n            \"ratings\": [\n                {\n                    \"id\": 1,\n                    \"rating\": 8,\n                    \"r_description\": \"Beautiful and action packed!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 2,\n                    \"rating\": 9,\n                    \"r_description\": \"Excelent!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 2\n                },\n                {\n                    \"id\": 3,\n                    \"rating\": 5,\n                    \"r_description\": \"Could have been better with the ending.\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 3\n                },\n                {\n                    \"id\": 10,\n                    \"rating\": 10,\n                    \"r_description\": \"Perfect!\",\n                    \"created_at\": \"2022-06-22T11:17:03.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:17:03.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 11,\n                    \"rating\": 10,\n                    \"r_description\": \"Perfect!\",\n                    \"created_at\": \"2022-06-22T14:22:48.000000Z\",\n                    \"updated_at\": \"2022-06-22T14:22:48.000000Z\",\n                    \"movie_id\": 1,\n                    \"user_id\": 2\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Sicario\",\n            \"description\": \"An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.\",\n            \"release\": \"2015-05-19\",\n            \"length\": 121,\n            \"mpaa_rating\": \"R\",\n            \"language\": \"English\",\n            \"director\": \"Denis Villeneuve\",\n            \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n            \"Overall_rating\": \"6.0\",\n            \"ratings\": [\n                {\n                    \"id\": 4,\n                    \"rating\": 7,\n                    \"r_description\": \"Nice!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 1\n                },\n                {\n                    \"id\": 5,\n                    \"rating\": 5,\n                    \"r_description\": \" \",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 2\n                },\n                {\n                    \"id\": 6,\n                    \"rating\": 6,\n                    \"r_description\": \"The soundtracks are marvelous!\",\n                    \"created_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"updated_at\": \"2022-06-22T11:11:15.000000Z\",\n                    \"movie_id\": 2,\n                    \"user_id\": 3\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Oblivion\",\n            \"description\": \"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.\",\n            \"release\": \"2013-04-19\",\n            \"length\": 124,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Joseph Kosinski\",\n            \"created_at\": \"2022-06-22T13:33:22.000000Z\",\n            \"updated_at\": \"2022-06-22T13:33:22.000000Z\",\n            \"Overall_rating\": \"No Rating\",\n            \"ratings\": []\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Test\",\n            \"description\": \"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.\",\n            \"release\": \"2013-04-19\",\n            \"length\": 124,\n            \"mpaa_rating\": \"PG-13\",\n            \"language\": \"English\",\n            \"director\": \"Joseph Kosinski\",\n            \"created_at\": \"2022-06-22T13:53:58.000000Z\",\n            \"updated_at\": \"2022-06-22T13:53:58.000000Z\",\n            \"Overall_rating\": \"No Rating\",\n            \"ratings\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/movie?title=Hunter&release=2013-04-19&length=124&description=A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.&mpaa_rating=PG-13&director=Joseph Kosinski&language=English&genre[]=Action&genre[]=Adventure&genre[]=Sci-Fi&performer[]=Tom Cruise&performer[]=Morgan Freeman&performer[]=Andrea Riseborough",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Hunter"
+						},
+						{
+							"key": "release",
+							"value": "2013-04-19"
+						},
+						{
+							"key": "length",
+							"value": "124"
+						},
+						{
+							"key": "description",
+							"value": "A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself."
+						},
+						{
+							"key": "mpaa_rating",
+							"value": "PG-13"
+						},
+						{
+							"key": "director",
+							"value": "Joseph Kosinski"
+						},
+						{
+							"key": "language",
+							"value": "English"
+						},
+						{
+							"key": "genre[]",
+							"value": "Action"
+						},
+						{
+							"key": "genre[]",
+							"value": "Adventure"
+						},
+						{
+							"key": "genre[]",
+							"value": "Sci-Fi"
+						},
+						{
+							"key": "performer[]",
+							"value": "Tom Cruise"
+						},
+						{
+							"key": "performer[]",
+							"value": "Morgan Freeman"
+						},
+						{
+							"key": "performer[]",
+							"value": "Andrea Riseborough"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/movie?title=Hunter&release=2013-04-19&length=124&description=A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.&mpaa_rating=PG-13&director=Joseph Kosinski&language=English&genre[]=Action&genre[]=Adventure&genre[]=Sci-Fi&performer[]=Tom Cruise&performer[]=Morgan Freeman&performer[]=Andrea Riseborough",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"movie"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Hunter"
+								},
+								{
+									"key": "release",
+									"value": "2013-04-19"
+								},
+								{
+									"key": "length",
+									"value": "124"
+								},
+								{
+									"key": "description",
+									"value": "A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself."
+								},
+								{
+									"key": "mpaa_rating",
+									"value": "PG-13"
+								},
+								{
+									"key": "director",
+									"value": "Joseph Kosinski"
+								},
+								{
+									"key": "language",
+									"value": "English"
+								},
+								{
+									"key": "genre[]",
+									"value": "Action"
+								},
+								{
+									"key": "genre[]",
+									"value": "Adventure"
+								},
+								{
+									"key": "genre[]",
+									"value": "Sci-Fi"
+								},
+								{
+									"key": "performer[]",
+									"value": "Tom Cruise"
+								},
+								{
+									"key": "performer[]",
+									"value": "Morgan Freeman"
+								},
+								{
+									"key": "performer[]",
+									"value": "Andrea Riseborough"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 16:30:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 16:30:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Add Movie\",\n    \"status\": true,\n    \"message\": \"Successfully added movie Hunter with Movie_ID 6.\"\n}"
+				}
+			]
+		}
+	]
+}
