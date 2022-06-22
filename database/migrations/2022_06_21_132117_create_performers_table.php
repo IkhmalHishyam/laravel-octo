@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table -> id() -> unique() -> autoIncrement();
-            $table -> string('username');
-            $table -> string('email');
+        Schema::create('performers', function (Blueprint $table) {
+            $table -> id() -> unique();
+            $table -> string('name');
             $table -> timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('performers');
     }
 };
